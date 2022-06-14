@@ -10,60 +10,60 @@ let rollStoneСondition = getRandomInRange(1, 11);
 
 //==============================
 let thisStoneIMG = () => {
-	return `./stone/${rollStoneType}.png`;
+	return `https://github.com/gaspid/foundryvtt-script/blob/main/stone/${rollStoneType}.png?raw=true`;
 };
 let thisStoneType = () => {
 	switch (rollStoneType) {
 		case 1:
-			return 'красный';
+			return 'Красный';
 			break;
 		case 2:
-			return 'голубой';
+			return 'Голубой';
 			break;
 		case 3:
-			return 'оранжевый';
+			return 'Оранжевый';
 			break;
 		case 4:
 			return 'Желто-белый';
 			break;
 		case 5:
-			return 'белый';
+			return 'Белый';
 			break;
 		case 6:
-			return 'синий';
+			return 'Синий';
 			break;
 		case 7:
 			return 'Фиолетовый';
 			break;
 		case 8:
-			return 'коричневый';
+			return 'Коричневый';
 			break;
 		case 9:
-			return 'зеленый';
+			return 'Зеленый';
 			break;
 		case 10:
-			return 'зелено-голубой';
+			return 'Зелено-голубой';
 			break;
 		case 11:
-			return 'цвет морской волны';
+			return 'Цвет морской волны';
 			break;
 		case 12:
-			return 'фиалковый';
+			return 'Фиалковый';
 			break;
 		case 13:
-			return 'бледно желтый';
+			return 'Бледно желтый';
 			break;
 		case 14:
-			return 'темно-синий';
+			return 'Темно-синий';
 			break;
 		case 15:
-			return 'лиловый';
+			return 'Лиловый';
 			break;
 		case 16:
-			return 'берюзовый';
+			return 'Берюзовый';
 			break;
 		case 17:
-			return 'лимонный';
+			return 'Лимонный';
 			break;
 	}
 };
@@ -109,11 +109,12 @@ game.user.targets.forEach((i) => {
 	targets.push(name);
 });
 
-let results_html = `<h2>Казино камней</h2>
-<h6>${stone.stoneType}</h6>
+let results_html = `<h1>Казино камней</h1>
+<h3><i>${stone.stoneType}</i></h3>
 <img src=${stone.stoneIMG}/>
- <strong>Cостояние: ${stone.stoneCondition}</strong>.
- <strong>Размер: ${stone.stoneCondition}</strong>.
+ <b>Cостояние:</b> ${stone.stoneCondition}
+<br>
+<b> Размер:</b> ${stone.stoneSize}
 
 
  `;
