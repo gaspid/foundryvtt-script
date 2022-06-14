@@ -124,3 +124,4 @@ ChatMessage.create({
 	speaker: ChatMessage.getSpeaker({ token: actor }),
 	content: results_html
 });
+AudioHelper.play({src: "sound/kazino.wav", volume: 0.2, loop: false}, true);
